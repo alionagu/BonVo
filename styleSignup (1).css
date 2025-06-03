@@ -51,13 +51,13 @@ nav ul li a {
     width: 100%;
     padding: 10px;
     display: flex;
-    justify-content: center; /* Центрируем по горизонтали */
+    justify-content: center;
 }
 
 .signup-container {
     display: flex;
     gap: 20px;
-    align-items: flex-start; /* Убираем растяжение по высоте */
+    align-items: flex-start;
     align-items: stretch;
 }
 
@@ -69,17 +69,17 @@ nav ul li a {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Меньше вертикальных отступов между элементами */
+    gap: 10px;
 }
 
 .signup-form h2 {
     font-size: 2rem;
-    margin-bottom: 5px; /* Меньше отступа под заголовком */
+    margin-bottom: 5px;
 }
 
 .signup-form p {
     font-size: 1rem;
-    margin-bottom: 10px; /* Меньше отступа под описанием */
+    margin-bottom: 10px;
 }
 
 .signup-form label {
@@ -91,22 +91,37 @@ nav ul li a {
 .signup-form input {
     width: 100%;
     padding: 10px;
-    margin-bottom: 8px; /* Меньше отступа после полей ввода */
+    margin-bottom: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
 }
 
-/* Новый класс для чекбоксов */
-.checkbox-container {
+/* Separate classes for checkboxes */
+.remember-me-container,
+.terms-container {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 5px; /* Reduced gap for tighter alignment */
     font-size: 0.8rem;
+    margin-bottom: 8px;
 }
 
-.remember-me input[type="checkbox"],
-.terms-and-conditions input[type="checkbox"] {
+.remember-me-container input[type="checkbox"],
+.terms-container input[type="checkbox"] {
     margin: 0;
+    width: 16px; /* Ensure checkbox size is consistent */
+    height: 16px;
+}
+
+.remember-me-container label,
+.terms-container label {
+    white-space: nowrap; /* Prevent label text from wrapping */
+    line-height: 1; /* Match line height to checkbox height */
+}
+
+.terms-container a {
+    color: #6a0dad; /* Purple color for terms link as in the image */
+    text-decoration: underline;
 }
 
 .signup-btn {
@@ -118,7 +133,7 @@ nav ul li a {
     border-radius: 4px;
     font-size: 1rem;
     cursor: pointer;
-    margin-top: 8px; /* Меньше отступ сверху кнопки */
+    margin-top: 8px;
 }
 
 .social-signin {
