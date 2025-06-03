@@ -1,0 +1,274 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5e8ed;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.signin button{
+  padding: 8px 16px;
+  border: 1px solid #333;
+  background-color: #642c4c;
+  color: floralwhite;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.hero:hover .hero-img {
+  transform: scale(1.05);
+}
+
+.logo {
+  position: absolute;
+  top: 20px; /* shifted to avoid fixed navbar */
+  left: 20px;
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+  background-color: white;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+
+.main {
+  display: flex;
+  justify-content: space-between; /* Sağ ve sol köşelere yayar */
+  align-items: flex-start;        /* Üstten hizalama */
+  gap: 40px;                      /* İki kutu arası boşluk */
+  padding: 20px;
+  flex-wrap: wrap;                /* Ekran daralınca alta geçmelerine izin verir */
+}
+
+
+.description{
+  flex: 1;
+  min-width: 250px;
+  font-size:x-large;
+}
+
+.key-facts{
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: 500;
+  font-display:block;
+}
+
+.key-facts li{
+  display: block;
+  line-height: 100px;
+}
+
+.favorite-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  color: white;
+  z-index: 2;
+}
+
+.weather-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 4px;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+}
+
+.weather-icon img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Description */
+.description {
+  padding: 20px;
+  background: #fff;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.key-facts {
+  flex: 1;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  height: fit-content;
+}
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: bold;
+
+}
+
+/* Gallery */
+.gallery {
+  margin: 20px;
+  text-align: center;
+}
+
+.gallery-wrapper {
+  position: relative;
+  display: flex;
+  align-items:center;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 20px;
+}
+
+.photos {
+  display: flex;
+  gap: 10px;                  /* margin yerine daha modern çözüm */
+  overflow-x: auto;           /* Taşan resimler yana kaydırılsın */
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.photos img {
+  max-width: 100%;
+  height: auto;
+  max-height: 220px;       /* Uzunluğu sınırladık */
+  object-fit: contain;     /* Resim tamamen görünür ama boşluk kalabilir */
+  border-radius: 10px;
+}
+
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  z-index: 1;
+}
+
+/* Review Section */
+.review {
+  margin: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.review-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.review-content {
+  font-size: larger;
+  margin-bottom: 20px; /* Butonla araya boşluk bırakır */
+}
+
+.review-btn {
+  align-self: flex-end; /* Sağ altta hizalanır */
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #304063;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  flex-direction: row-reverse;
+}
+
+.footer-links{
+  margin: 0;
+  padding:0;
+}
+.subscribe button{ /* Sağ altta hizalanır */
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #642c4c;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.5s;
+}

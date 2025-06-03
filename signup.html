@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="styleSignup.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1 class="logo">Sign Up Page</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">AI Assistance</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Language</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Main Content -->
+    <main>
+        <div class="container1">
+            <div class="signup-container">
+                <div class="signup-form">
+                    
+                    <h2>Create Your Account</h2>
+                    <p>Enter your details to sign up for an account</p>
+
+                    <!-- Name Input -->
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+
+                    <!-- Email Input -->
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+
+                    <!-- Password Input -->
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Password">
+
+                    <!-- Remember Me Checkbox -->
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me">Remember me</label>
+                    </div>
+
+                    <!-- Terms and Conditions Checkbox -->
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="terms-checkbox">
+                        <label for="terms-checkbox">I agree to the <a href="#" class="terms-link">terms & policy</a></label>
+                    </div>
+
+                    <!-- Sign Up Button -->
+                    <button type="submit" class="signup-btn">Sign Up</button>
+
+                    <!-- Social Sign In Buttons -->
+                    <div class="social-signin">
+                        <button class="google-btn">
+                            <img src="images/google-logo.svg" alt="Google Logo" width="30">
+                            Sign in with Google
+                        </button>
+                        <button class="apple-btn">
+                            <img src="images/apple-logo.svg" alt="Apple Logo" width="30">
+                            Sign in with Apple
+                        </button>
+                    </div>
+
+                    <!-- Login Link -->
+                    <p>Already have an account? <a href="#" class="login-link">Log In</a></p>
+                </div>
+
+                <!-- Background Image -->
+                <div class="background-image">
+                    <img src="images/background-map.jpg" alt="Background Map">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Contacts</a>
+                <a href="#">Terms of use</a>
+                <a href="#">Privacy and Cookies Statement</a>
+            </div>
+            <div class="footer-feedback">
+                <form action="#">
+                    <input type="text" placeholder="Help us make your experience better...">
+                    <button type="submit">Send feedback</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
