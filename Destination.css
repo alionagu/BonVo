@@ -42,8 +42,12 @@ nav a {
   color: floralwhite;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+.signin button:hover {
+  background-color: #a84c89; /* Цвет при наведении */
+}
 /* Hero Section */
 .hero {
   position: relative;

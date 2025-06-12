@@ -207,6 +207,12 @@ iframe {
   position: relative;
 }
 
+.destination-card-link {
+  text-decoration: none; /* Убираем подчеркивание */
+  color: inherit; /* Наследуем цвет текста */
+  display: block; /* Ссылка занимает всю карточку */
+}
+
 .image-wrapper {
   position: relative;
 }
