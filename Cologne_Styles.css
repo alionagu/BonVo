@@ -8,6 +8,68 @@ body {
   scroll-behavior: smooth; /* Smooth scrolling */
 }
 
+/* ===== Header / Navbar Styles (Updated) ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  background-color: rgba(
+    0,
+    40,
+    60,
+    0.8
+  ); /* dark bluish with some transparency */
+  backdrop-filter: blur(6px); /* glassy effect */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #e0f0ff; /* soft light blue */
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+.navbar nav ul li a.active {
+  color: #84d1ff; /* highlighted bluish tone */
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.signin-button {
+  text-decoration: none;
+  background-color: #00897b; /* teal tone to match natural tones */
+  color: white;
+  padding: 8px 22px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.signin-button:hover {
+  background-color: #00695c;
+  transform: scale(1.03);
+}
+
+/* ===== City Image + Logo Styles ===== */
 .citypic {
   position: relative; /* Makes .citypic the reference point for absolutely positioned children */
   display: block; /* Shrinks the container to fit its content */
@@ -191,6 +253,12 @@ iframe {
   background-color: #eee;
 }
 
+/* Active state for selected filter buttons */
+.filters button.active {
+  background-color: #333;
+  color: white;
+}
+
 .destinations-row {
   display: flex;
   gap: 20px;
@@ -208,9 +276,9 @@ iframe {
 }
 
 .destination-card-link {
-  text-decoration: none; /* Убираем подчеркивание */
-  color: inherit; /* Наследуем цвет текста */
-  display: block; /* Ссылка занимает всю карточку */
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .image-wrapper {
@@ -222,6 +290,18 @@ iframe {
   height: 130px;
   object-fit: cover;
   display: block;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease; /* Added for zoom effect */
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.05); /* Slight zoom on hover */
 }
 
 .heart {
