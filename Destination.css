@@ -159,13 +159,14 @@ nav a {
   gap: 15px;
   justify-content: center;
   margin-bottom: 20px;
+  
 }
 
 .social-links a {
   text-decoration: none;
   color: #0077cc;
   font-weight: bold;
-
+  font-size: 2em;
 }
 
 /* Gallery */

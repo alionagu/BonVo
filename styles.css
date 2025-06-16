@@ -105,6 +105,43 @@ nav ul li a {
     margin-bottom: 10px;
 }
 
+/* Password field wrapper to position the eye icon */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+/* Password input padding to avoid overlap with icon */
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px; /* Space for the eye icon */
+  box-sizing: border-box;
+}
+
+/* Eye toggle button inside password field */
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  color: #666;
+  font-size: 18px;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect on eye icon */
+.toggle-password:hover {
+  color: #2c524b; /* Matches your button color */
+}
+
+
 .remember-me {
     display: flex;
     align-items: center;
@@ -128,6 +165,12 @@ nav ul li a {
     margin-top: 8px; /* Меньше отступ сверху кнопки */
 }
 
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 4px;
+  min-height: 18px; /* reserve space so layout doesn’t jump when showing/hiding errors */
+}
 
 
 .social-signin {
