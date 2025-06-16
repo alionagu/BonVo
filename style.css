@@ -44,6 +44,12 @@ nav a {
   font-weight: 500;
 }
 
+.navbar nav ul li a.active {
+  color: #0077cc;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .signin button {
   padding: 8px 16px;
   border: 1px solid #333;
@@ -55,7 +61,7 @@ nav a {
 
 /* Hero Section */
 .hero {
-  background-image: url('images/font_im.png');
+  background-image: url("images/font_im.png");
   background-size: cover;
   background-position: center;
   height: 55vh;
@@ -73,7 +79,7 @@ nav a {
   border-radius: 50%;
   border: 3px solid white;
   background-color: white;
-  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Controls under Hero */
@@ -132,7 +138,7 @@ nav a {
   border-radius: 10px;
   overflow: hidden;
   background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s;
 }
 
@@ -160,7 +166,7 @@ nav a {
 .card a {
   margin: 0 16px 16px 16px;
   display: inline-block;
-  color: #007BFF;
+  color: #007bff;
   text-decoration: none;
   font-weight: 500;
 }
@@ -198,7 +204,7 @@ nav a {
   height: 200px;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .city-card img {
@@ -217,4 +223,3 @@ nav a {
   border-radius: 4px;
   font-size: 14px;
 }
-
