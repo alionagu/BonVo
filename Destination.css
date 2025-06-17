@@ -113,9 +113,11 @@ nav a {
   position: absolute;
   top: 15px;
   right: 15px;
-  font-size: 24px;
+  font-size: 40px;
   color: white;
   z-index: 2;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .weather-icon {
@@ -126,8 +128,8 @@ nav a {
   border-radius: 50%;
   padding: 4px;
   z-index: 2;
-  width: 50px;
-  height: 50px;
+  width:70px;
+  height: 70px;
 }
 
 .weather-icon img {
@@ -253,27 +255,92 @@ nav a {
   cursor: pointer;
   transition: 0.5s;
 }
-.footer{
+.footer {
+  background-color: #e2e2e2;
+  padding: 30px 20px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
-  padding: 12px 40px;
-  background-color: white;
-  border-bottom: 1px solid #ddd;
-  flex-direction: row-reverse;
+  font-size: 14px;
 }
 
-.footer-links{
-  margin: 0;
-  padding:0;
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #333;
 }
-.subscribe button{ /* Sağ altta hizalanır */
-  padding: 12px 24px;
-  font-size: 16px;
-  background-color: #642c4c;
-  color: white;
-  border: none;
-  border-radius: 12px;
+
+.footer-right {
+  margin-top: 20px;
+}
+
+.feedback-btn {
+  padding: 15px 25px;
+  background: white;
+  border: 2px solid black;
+  border-radius: 30px;
+  font-size: 14px;
   cursor: pointer;
-  transition: 0.5s;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.site-footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 20px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-column h4 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #555;
+  padding-bottom: 5px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  border-top: 1px solid #444;
+  margin-top: 30px;
+}
+
+.favorite-icon.clicked {
+  color: red;
 }

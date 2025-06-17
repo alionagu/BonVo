@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const heartIcon = document.querySelector(".favorite-icon");
   heartIcon.addEventListener("click", () => {
     heartIcon.classList.toggle("clicked");
+    heartIcon.classList.toggle("fa-regular");
+    heartIcon.classList.toggle("fa-solid");
+
     heartIcon.style.transform = "scale(1.4)";
     heartIcon.style.transition = "transform 0.3s";
     setTimeout(() => {
@@ -18,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
       weatherIcon.style.transform = "scale(1)";
     }, 300);
-    alert("Sorry, the weather app is under the weather today!");
+    alert("Sorry, the weather app is feeling under the weather today 😓");
   });
 
   // IMAGE GALLERY ZOOM-IN
@@ -68,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     textarea.style.marginTop = "10px";
     textarea.style.padding = "10px";
     textarea.classList.add("dynamic-review-form");
+    textarea.style.fontSize = "2em";
 
     const sendBtn = document.createElement("button");
     sendBtn.innerText = "Send";
@@ -89,3 +93,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
