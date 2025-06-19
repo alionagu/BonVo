@@ -79,6 +79,12 @@
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
+
+        <button id="toggleMapBtn" style="margin-top: 10px">Hide Map</button>
+        <p id="mapInfo" style="display: none; margin-top: 10px">
+          This map shows the central area of Cologne. Use it to locate tourist
+          hotspots like the Cathedral, Zoo, and Museums!
+        </p>
       </div>
     </div>
 
@@ -172,6 +178,29 @@
         <p>&copy; 2025 Visit Cologne. All rights reserved.</p>
       </div>
     </footer>
+
+    <!-- Scroll Up Button -->
+    <button
+      id="scrollUpBtn"
+      title="Go to top"
+      style="
+        display: none;
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        z-index: 1000;
+        padding: 10px 15px;
+        font-size: 18px;
+        border: none;
+        background-color: #333;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      "
+    >
+      ↑ Top
+    </button>
+
     <script src="Cologne.js"></script>
   </body>
 </html>
