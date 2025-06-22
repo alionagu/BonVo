@@ -287,6 +287,11 @@ nav a {
   line-height: 1.4;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 .site-footer {
   background-color: #222;
   color: #fff;
