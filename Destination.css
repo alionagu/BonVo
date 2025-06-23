@@ -147,14 +147,47 @@ nav a {
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.key-facts {
-  flex: 1;
-  padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  height: fit-content;
+.key-facts ul {
+  list-style: none;
+  padding: 0;
+  margin: 100px auto 0;
+  max-width: 500px;
+  text-align: left;
 }
+
+.key-facts li {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 18px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #642c4c; /* matches your theme */
+  line-height: 1.3;
+  background: #fff7fb; /* subtle highlight background */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(100, 44, 76, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.key-facts li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(100, 44, 76, 0.3);
+  cursor: default;
+}
+
+/* Add a nice icon before each fact */
+.key-facts li::before {
+  content: "\f058"; /* FontAwesome check-circle icon unicode */
+  font-family: "Font Awesome 6 Free"; 
+  font-weight: 900; /* solid */
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #a84c89;
+  font-size: 1.6rem;
+}
+
 /* Social Links */
 .social-links {
   display: flex;
@@ -348,4 +381,33 @@ html {
 
 .favorite-icon.clicked {
   color: red;
+}
+
+.language-dropdown {
+  position: relative;
+}
+
+.language-dropdown .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 120px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 1000;
+}
+
+.language-dropdown .dropdown li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+}
+
+.language-dropdown .dropdown li a:hover {
+  background-color: #f0f0f0;
 }

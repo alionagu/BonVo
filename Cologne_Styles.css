@@ -52,20 +52,20 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.signin-button {
+.signin button {
   text-decoration: none;
-  background-color: #00897b; /* teal tone to match natural tones */
+  background-color: #306e85; /* teal tone to match natural tones */
   color: white;
   padding: 8px 22px;
-  border-radius: 30px;
+  border-radius: 10px;
   font-size: 15px;
   font-weight: 600;
-  border: none;
+  border-color: gray;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.signin-button:hover {
-  background-color: #00695c;
+.signin button:hover {
+  background-color: #1a464e;
   transform: scale(1.03);
 }
 
@@ -150,6 +150,7 @@ iframe {
   align-items: center;
   gap: 15px; /* Space between the label and weather logo */
 }
+
 
 .weather-logo img {
   width: 180px; /* Adjust size as needed */
@@ -267,9 +268,9 @@ iframe {
 }
 
 .destination-card {
-  width: 180px;
+  width: 400px;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 5px;
   overflow: hidden;
   text-align: center;
   position: relative;
@@ -287,14 +288,14 @@ iframe {
 
 .image-wrapper img {
   width: 100%;
-  height: 130px;
+  height: 200px;
   object-fit: cover;
   display: block;
 }
 
 .image-wrapper img {
   width: 100%;
-  height: 130px;
+  height: 200px;
   object-fit: cover;
   display: block;
   transition: transform 0.3s ease; /* Added for zoom effect */
@@ -306,13 +307,13 @@ iframe {
 
 .heart {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 20px;
+  top: 2px;
+  right: 50px;
+  font-size: 40px;
   color: black;
   background: white;
   border-radius: 50%;
-  padding: 4px 6px;
+  padding: 6px 6px;
 }
 
 .destination-card h3 {
@@ -322,7 +323,7 @@ iframe {
 
 .stars {
   color: gold;
-  font-size: 14px;
+  font-size: 20px;
   padding-bottom: 10px;
 }
 
@@ -416,4 +417,33 @@ iframe {
 
 html {
   scroll-behavior: smooth;
+}
+
+.language-dropdown {
+  position: relative;
+}
+
+.language-dropdown .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 120px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 1000;
+}
+
+.language-dropdown .dropdown li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+}
+
+.language-dropdown .dropdown li a:hover {
+  background-color: #f0f0f0;
 }

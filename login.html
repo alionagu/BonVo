@@ -12,15 +12,18 @@
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="#">AI Assistance</a></li>
           <li><a href="#">About Us</a></li>
           <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Language</a></li>
+          <li class="language-dropdown">
+            <a href="#" id="language-toggle">Language ▾</a>
+            <ul class="dropdown" id="language-menu">
+              <li><a href="?lang=en">English</a></li>
+              <li><a href="?lang=de">Deutsch</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
-      <div class="signin">
-        <a href="login.html"><button>Sign In</button></a>
-      </div>
+      
     </header>
 
     <!-- Main Content -->
@@ -80,24 +83,22 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="footer-links">
-          <a href="#">Contacts</a>
-          <a href="#">Terms of use</a>
-          <a href="#">Privacy and Cookies Statement</a>
+     <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-column" id="about-us">
+          <h4>About Us</h4>
+          <p>At BonVoyage, we believe travel is more than just a destination—it's a journey full of discovery. <br>Our mission is to make exploring the world easier and more inspiring by providing reliable travel information, tips, and destination guides. <br> Whether you're planning your next adventure or just dreaming about it, BonVoyage is here to help you travel smarter.</p>
         </div>
-        <div class="footer-feedback">
-          <form action="#">
-            <input
-              type="text"
-              placeholder="Help us make your experience better..."
-            />
-            <button type="submit">Send feedback</button>
-          </form>
+        <div class="footer-column" id="contact-us">
+          <h4>Contact</h4>
+          <p>Email: info@visitcologne.com</p>
+          <p>Phone: +49 123 456789</p>
         </div>
       </div>
-    </footer>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Visit Cologne. All rights reserved.</p>
+      </div
+  </footer>
     <script src="login.js"></script>
 </body>
 </html>

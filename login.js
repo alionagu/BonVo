@@ -1,4 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // 🌐 Language Dropdown Toggle
+  const toggle = document.getElementById("language-toggle");
+  const menu = document.getElementById("language-menu");
+
+  if (toggle && menu) {
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+        menu.style.display = "none";
+      }
+    });
+  }
+
   const loginBtn = document.querySelector('.login-btn');
   const emailInput = document.getElementById('email');
   const passwordInput = document.getElementById('password');
@@ -9,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const googleBtn = document.querySelector('.google-btn');
   const appleBtn = document.querySelector('.apple-btn');
   const togglePasswordBtn = document.querySelector('.toggle-password');
-    
+
   togglePasswordBtn.addEventListener('click', () => {
     const isPassword = passwordInput.getAttribute('type') === 'password';
     passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
@@ -59,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!isValid) return;
 
-    alert('Login successful (demo)');
+    alert('Login successful!! 🎈🎉');
   });
 
   forgotPasswordLink.addEventListener('click', function(event) {
@@ -100,3 +117,4 @@ document.addEventListener('DOMContentLoaded', function () {
     alert("😴 Apple sign-in is napping right now. Please check back later!");
   });
 });
+

@@ -1,4 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // 🌐 Language Dropdown Toggle
+  const toggle = document.getElementById("language-toggle");
+  const menu = document.getElementById("language-menu");
+
+  if (toggle && menu) {
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+        menu.style.display = "none";
+      }
+    });
+  }
+
   const signupBtn = document.querySelector('.signup-btn');
 
   const nameInput = document.getElementById('name');
@@ -18,7 +35,8 @@ document.addEventListener('DOMContentLoaded', function () {
   togglePasswordBtn.addEventListener('click', () => {
     const isPassword = passwordInput.getAttribute('type') === 'password';
     passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
-    togglePasswordBtn.textContent = isPassword ? '🙈' : '👁️';});
+    togglePasswordBtn.textContent = isPassword ? '🙈' : '👁️';
+  });
 
   // Validation functions
   function validateName(name) {
@@ -97,3 +115,4 @@ document.addEventListener('DOMContentLoaded', function () {
     alert("😴 Apple sign-in is napping right now. Please check back later!");
   });
 });
+

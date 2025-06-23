@@ -1,4 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // 🌐 Language Dropdown Toggle
+  const toggle = document.getElementById("language-toggle");
+  const menu = document.getElementById("language-menu");
+
+  if (toggle && menu) {
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+        menu.style.display = "none";
+      }
+    });
+  }
+
   // Smooth scroll on scroll indicator
   const scrollLink = document.querySelector(".scroll-indicator");
   if (scrollLink) {
@@ -101,4 +118,19 @@ document.addEventListener("DOMContentLoaded", () => {
   backToTopBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+    // WEATHER ICON CLICK BEHAVIOR
+  const weatherIcon = document.querySelector(".weather-logo img");
+  if (weatherIcon) {
+    weatherIcon.addEventListener("click", () => {
+      weatherIcon.style.transform = "scale(1.4)";
+      weatherIcon.style.transition = "transform 0.3s ease";
+      setTimeout(() => {
+        weatherIcon.style.transform = "scale(1)";
+      }, 300);
+      alert("Sorry, the weather app is feeling under the weather today 😓");
+    });
+  }
+
+
 });

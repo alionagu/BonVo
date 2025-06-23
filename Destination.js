@@ -1,28 +1,49 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // 🌐 Language Dropdown Toggle
+  const toggle = document.getElementById("language-toggle");
+  const menu = document.getElementById("language-menu");
+
+  if (toggle && menu) {
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+        menu.style.display = "none";
+      }
+    });
+  }
+
   // HEART ICON ANIMATION
   const heartIcon = document.querySelector(".favorite-icon");
-  heartIcon.addEventListener("click", () => {
-    heartIcon.classList.toggle("clicked");
-    heartIcon.classList.toggle("fa-regular");
-    heartIcon.classList.toggle("fa-solid");
+  if (heartIcon) {
+    heartIcon.addEventListener("click", () => {
+      heartIcon.classList.toggle("clicked");
+      heartIcon.classList.toggle("fa-regular");
+      heartIcon.classList.toggle("fa-solid");
 
-    heartIcon.style.transform = "scale(1.4)";
-    heartIcon.style.transition = "transform 0.3s";
-    setTimeout(() => {
-      heartIcon.style.transform = "scale(1)";
-    }, 300);
-  });
+      heartIcon.style.transform = "scale(1.4)";
+      heartIcon.style.transition = "transform 0.3s";
+      setTimeout(() => {
+        heartIcon.style.transform = "scale(1)";
+      }, 300);
+    });
+  }
 
   // WEATHER ICON MESSAGE & ANIMATION
   const weatherIcon = document.querySelector(".weather-icon");
-  weatherIcon.addEventListener("click", () => {
-    weatherIcon.style.transform = "scale(1.4)";
-    weatherIcon.style.transition = "transform 0.3s";
-    setTimeout(() => {
-      weatherIcon.style.transform = "scale(1)";
-    }, 300);
-    alert("Sorry, the weather app is feeling under the weather today 😓");
-  });
+  if (weatherIcon) {
+    weatherIcon.addEventListener("click", () => {
+      weatherIcon.style.transform = "scale(1.4)";
+      weatherIcon.style.transition = "transform 0.3s";
+      setTimeout(() => {
+        weatherIcon.style.transform = "scale(1)";
+      }, 300);
+      alert("Sorry, the weather app is feeling under the weather today 😓");
+    });
+  }
 
   // IMAGE GALLERY ZOOM-IN
   const photos = document.querySelectorAll(".photos img");
@@ -59,38 +80,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // REVIEW FORM CREATION
   const reviewBtn = document.querySelector(".review-btn");
-  reviewBtn.addEventListener("click", () => {
-    if (document.querySelector(".dynamic-review-form")) return;
+  if (reviewBtn) {
+    reviewBtn.addEventListener("click", () => {
+      if (document.querySelector(".dynamic-review-form")) return;
 
-    const container = document.querySelector(".review-right");
+      const container = document.querySelector(".review-right");
 
-    const textarea = document.createElement("textarea");
-    textarea.placeholder = "Write your review here...";
-    textarea.style.width = "100%";
-    textarea.style.height = "100px";
-    textarea.style.marginTop = "10px";
-    textarea.style.padding = "10px";
-    textarea.classList.add("dynamic-review-form");
-    textarea.style.fontSize = "2em";
+      const textarea = document.createElement("textarea");
+      textarea.placeholder = "Write your review here...";
+      textarea.style.width = "100%";
+      textarea.style.height = "100px";
+      textarea.style.marginTop = "10px";
+      textarea.style.padding = "10px";
+      textarea.classList.add("dynamic-review-form");
+      textarea.style.fontSize = "2em";
 
-    const sendBtn = document.createElement("button");
-    sendBtn.innerText = "Send";
-    sendBtn.style.marginTop = "10px";
-    sendBtn.style.padding = "10px 20px";
-    sendBtn.style.backgroundColor = "#304063";
-    sendBtn.style.color = "white";
-    sendBtn.style.border = "none";
-    sendBtn.style.borderRadius = "5px";
-    sendBtn.style.cursor = "pointer";
+      const sendBtn = document.createElement("button");
+      sendBtn.innerText = "Send";
+      sendBtn.style.marginTop = "10px";
+      sendBtn.style.padding = "10px 20px";
+      sendBtn.style.backgroundColor = "#304063";
+      sendBtn.style.color = "white";
+      sendBtn.style.border = "none";
+      sendBtn.style.borderRadius = "5px";
+      sendBtn.style.cursor = "pointer";
 
-    container.appendChild(textarea);
-    container.appendChild(sendBtn);
+      container.appendChild(textarea);
+      container.appendChild(sendBtn);
 
-    sendBtn.addEventListener("click", () => {
-      alert("Thanks! We will check your review and publish it as soon as possible.");
-      textarea.remove();
-      sendBtn.remove();
+      sendBtn.addEventListener("click", () => {
+        alert("Please sign in or create an account to use this feature.");
+        textarea.remove();
+        sendBtn.remove();
+      });
     });
-  });
+  }
 });
+
 

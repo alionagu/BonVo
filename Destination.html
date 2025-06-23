@@ -14,10 +14,15 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="#">AI Assistance</a></li>
         <li><a href="#about-us">About Us</a></li>
         <li><a href="#contact-us">Contact Us</a></li>
-        <li><a href="#">Language</a></li>
+        <li class="language-dropdown">
+            <a href="#" id="language-toggle">Language ▾</a>
+            <ul class="dropdown" id="language-menu">
+              <li><a href="?lang=en">English</a></li>
+              <li><a href="?lang=de">Deutsch</a></li>
+            </ul>
+          </li>
       </ul>
     </nav>
     <div class="signin">
@@ -60,7 +65,6 @@
   <!-- Gallery -->
   <section class="gallery">
     <div class="gallery-wrapper">
-      <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
       <div class="photos">
         <img src="imagesForMuseum/duft1.jpg" alt="Duft Museum 1">
         <img src="imagesForMuseum/duft2.jpg" alt="Duft Museum 2">
@@ -76,7 +80,6 @@
         <img src="imagesForMuseum/duft12.jpg" alt="Duft Museum 12">
         
       </div>
-      <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
     </div>
   </section>
 

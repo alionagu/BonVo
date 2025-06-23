@@ -9,6 +9,23 @@
 //  Add click & hover effects to top city cards
 
 document.addEventListener("DOMContentLoaded", function () {
+  // 🌐 Language Dropdown Toggle
+  const toggle = document.getElementById("language-toggle");
+  const menu = document.getElementById("language-menu");
+
+  if (toggle && menu) {
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+        menu.style.display = "none";
+      }
+    });
+  }
+
   // 1. Highlight clicked nav link
   const navLinks = document.querySelectorAll(".navbar nav ul li a");
   navLinks.forEach((link) => {
@@ -21,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // 2. Toggle filter panel
   const filterBtn = document.querySelector(".filter-button");
   if (filterBtn) {
-    // Create and insert filter panel
     const filterPanel = document.createElement("div");
     filterPanel.className = "filter-panel";
     filterPanel.style.display = "none";
@@ -31,10 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     filterPanel.style.borderRadius = "8px";
     filterPanel.style.maxWidth = "800px";
     filterPanel.innerHTML = "<p>Filter options coming soon!</p>";
-    document.body.insertBefore(
-      filterPanel,
-      document.querySelector(".tour-cards")
-    );
+    document.body.insertBefore(filterPanel, document.querySelector(".tour-cards"));
 
     filterBtn.addEventListener("click", function () {
       filterPanel.style.display =
@@ -42,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // 3. Hero search alert (with Enter key support)
+  // 3. Hero search alert
   const searchBtn = document.querySelector(".search-bar button");
   const searchInput = document.querySelector(".search-bar input");
 
@@ -77,18 +90,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // 5. Add click & hover effects to top city cards - City page coming soon
+  // 5. Add click & hover effects to top city cards
   cityCards.forEach((card) => {
     card.addEventListener("click", function () {
-      // If this card contains an <a>, let default link behavior happen
       if (card.querySelector("a")) return;
-
-      const label =
-        card.querySelector(".city-label")?.textContent || card.textContent;
+      const label = card.querySelector(".city-label")?.textContent || card.textContent;
       alert(`You selected: ${label} — Page coming soon!`);
     });
 
-    // Hover effects
     card.addEventListener("mouseover", function () {
       card.style.cursor = "pointer";
       card.style.transform = "scale(1.03)";
@@ -104,7 +113,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const tourCards = document.querySelectorAll(".tour-cards .card");
   tourCards.forEach((card) => {
     const link = card.querySelector("a");
-    // Skip Duft Museum since it has a real link
     if (link && link.getAttribute("href") === "Destination.html") return;
 
     card.addEventListener("click", () => {
@@ -112,7 +120,6 @@ document.addEventListener("DOMContentLoaded", function () {
       alert(`Page for "${title}" is coming soon!`);
     });
 
-    // Optional: pointer cursor on hover
     card.addEventListener("mouseover", () => {
       card.style.cursor = "pointer";
       card.style.transform = "scale(1.02)";
